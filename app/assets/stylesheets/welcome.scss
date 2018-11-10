@@ -9,3 +9,16 @@ h1 {
 body {
     background-color: #ffffcc;
 }
+
+table, th, td {
+   border: 4px solid Green;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
