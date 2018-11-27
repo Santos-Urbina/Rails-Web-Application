@@ -1,37 +1,26 @@
 <div id="site-header">
   <div class="wrapper">
-    <h1><a href="./">Charlotte Cheap Eats</a></h1>
+    <h1><a href="../">Charlotte Cheap Eats</a></h1>
   </div>
 </div>
 <div class="wrapper">
   <div id="main">
-    <p>
-        <strong>Name:</strong>
-        <%= @restaurant.name %>
-    </p>
-    <p>
-        <strong>Genre:</strong>
-        <%= @restaurant.genre %>
-    </p>
-    <p>
-        <strong>Rating:</strong>
-        <%= @restaurant.rating %>
-    </p>
-    
+    <h1><%= @restaurant.name %></h1>
+    <ul>
+      <li><strong>Name: </strong><%= @restaurant.name %></li>
+      <li><strong>Genre: </strong><%= @restaurant.genre %></li>
+      <li><strong>Rating: </strong><%= @restaurant.rating %></li>
+    </ul>
+    <hr>
     <h2>Reviews</h2>
     <% @restaurant.reviews.each do |review| %>
-    <p>
-      <strong>Reviewer: </strong>
-      <%= review.reviewer %>
-    </p>
-    
-    <p>
-      <strong>Review: </strong>
-      <%= review.body %>
-    </p>
+    <div class="comment">
+      <p><strong>Reviewer: </strong><%= review.reviewer %></p>
+      <p><strong>Review: </strong><%= review.body %></p>
+    </div>
     <% end %>
-    
-    <h2>Add a Review</h2>
+    <hr>
+    <h3>Add a Review</h3>
     <%= form_for([@restaurant, @restaurant.reviews.build]) do |f| %>
     <p>
       <%= f.label :reviewer %><br>
@@ -45,7 +34,7 @@
       <%= f.submit %>
     </p>
   <% end %>
-  
+
   <br>
   <%= link_to 'Restaurant List', restaurants_path %>
   </div>

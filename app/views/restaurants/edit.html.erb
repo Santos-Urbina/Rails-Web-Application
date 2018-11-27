@@ -1,45 +1,42 @@
 <div id="site-header">
   <div class="wrapper">
-    <h1><a href="./">Edit a Restaurant</a></h1>
+    <h1><a href="../">Charlotte Cheap Eats</a></h1>
   </div>
 </div>
 <div class="wrapper">
-<div id="main">
-<%= form_for :restaurant, url: restaurant_path(@restaurant), method: :patch do |f| %>
-
-  <% if @restaurant.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@restaurant.errors.count, "error") %> prohibited
-        this restaurant from being saved:
-      </h2>
-      <ul>
-        <% @restaurant.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
- 
-  <p>
-    <%= f.label :genre %><br>
-    <%= f.text_field :genre %>
-  </p>
-  
-  <p>
-      <%= f.label :rating %><br>
-      <%= f.text_field :rating %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
-<br><%= link_to'Back to Restaurants', restaurants_path%>
-</div>
+  <div id="main">
+    <h1>Edit Restaurant</h1>
+    <%= form_for :restaurant, url: restaurant_path(@restaurant), method: :patch do |f| %>
+      <% if @restaurant.errors.any? %>
+        <div id="error_explanation">
+          <p class="error">
+            <%= pluralize(@restaurant.errors.count, "error") %> prohibited
+            this restaurant from being saved:
+          </p>
+          <ul>
+            <% @restaurant.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <p>
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </p>
+      <p>
+        <%= f.label :genre %><br>
+        <%= f.text_field :genre %>
+      </p>
+      <p>
+          <%= f.label :rating %><br>
+          <%= f.text_field :rating %>
+      </p>
+      <p>
+        <%= f.submit %>
+      </p>
+    <% end %>
+    <hr>
+    <p><%= link_to'Back to Restaurants', restaurants_path%></p>
+  </div>
 </div>
