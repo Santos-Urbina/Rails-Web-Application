@@ -11,28 +11,16 @@
       <li><strong>Genre: </strong><%= @restaurant.genre %></li>
       <li><strong>Rating: </strong><%= @restaurant.rating %></li>
     </ul>
-    <hr>
     
+    <hr>
     <h2>Reviews</h2>
     <div class="comment">
     <%= render @restaurant.reviews %>
     </div>
-    
     <hr>
+    
     <h3>Add a Review</h3>
-    <%= form_for([@restaurant, @restaurant.reviews.build]) do |f| %>
-    <p>
-      <%= f.label :reviewer %><br>
-      <%= f.text_field :reviewer %>
-    </p>
-    <p>
-      <%= f.label :body %><br>
-      <%= f.text_area :body %>
-    </p>
-    <p>
-      <%= f.submit %>
-    </p>
-  <% end %>
+    <%= render 'reviews/form' %>
 
   <br>
   <%= link_to 'Restaurant List', restaurants_path %>
