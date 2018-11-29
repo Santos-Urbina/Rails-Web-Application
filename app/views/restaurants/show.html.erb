@@ -12,13 +12,12 @@
       <li><strong>Rating: </strong><%= @restaurant.rating %></li>
     </ul>
     <hr>
+    
     <h2>Reviews</h2>
-    <% @restaurant.reviews.each do |review| %>
     <div class="comment">
-      <p><strong>Reviewer: </strong><%= review.reviewer %></p>
-      <p><strong>Review: </strong><%= review.body %></p>
+    <%= render @restaurant.reviews %>
     </div>
-    <% end %>
+    
     <hr>
     <h3>Add a Review</h3>
     <%= form_for([@restaurant, @restaurant.reviews.build]) do |f| %>
