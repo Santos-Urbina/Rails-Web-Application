@@ -13,3 +13,183 @@
  *= require_tree .
  *= require_self
  */
+
+
+/* ------------------------------ [ MARGIN FIX ] */
+
+*:first-child {
+    margin-top: 0 !important;
+}
+
+*:last-child {
+    margin-bottom: 0 !important;
+}
+
+
+/* ------------------------------ [ DEFAULTS ] */
+
+a {
+    color: #00703c;
+    text-decoration: underline dotted;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    background: #ebebeb;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Verdana, sans-serif;
+    font-weight: 100;
+}
+
+hr {
+    border: 2px solid #cccccc;
+    margin: 50px;
+}
+
+p {
+    margin: 0 0 20px 0;
+}
+
+table, th, td {
+    border: 3px solid #00703c;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 0 20px 0;
+    width: 100%;
+}
+
+th {
+    background: #00703c;
+    color: #ffffff;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background: #ffffff;
+}
+
+tr:nth-child(odd) {
+    background: #ebebeb;
+}
+
+
+/* ------------------------------ [ LAYOUT ] */
+
+#main {
+    background: white;
+    box-shadow: 0 0 10px #7a7a7a;
+    box-sizing: border-box;
+    margin: 30px 0 30px 0 !important;
+    padding: 25px;
+    width: 100%;
+}
+
+.wrapper {
+    width: 980px;
+    margin: auto;
+}
+
+
+/* ------------------------------ [ TEXT ] */
+
+.text-center {
+    text-align: center;
+}
+
+
+/* ------------------------------ [ SITE HEADER ] */
+
+#site-header {
+    background: #00703c;
+    height: 75px;
+    width: 100%;
+}
+
+#site-header h1 {
+    color: #ffffff;
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 50px;
+    line-height: 75px;
+    margin: 0;
+}
+
+#site-header a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* ------------------------------ [ ERROR MSG ] */
+
+#error_explanation {
+  background: #f5f5f5;
+  padding: 25px;
+}
+
+.error {
+    color: #ff0000;
+}
+
+
+/* ------------------------------ [ COMMENTS ] */
+
+.comment {
+    background: #f5f5f5;
+    box-sizing: border-box;
+    margin: 10px 0 10px 0;
+    padding: 25px;
+    width: 100%;
+}
+
+
+/* ------------------------------ [ INPUT ] */
+
+input {
+    border: 2px solid #cccccc;
+    font-size: 20px;
+    padding: 10px;
+}
+
+input[type=text] {
+    width: 50%;
+}
+
+input[type=submit] {
+    background: #00703c;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+textarea {
+    border: 2px solid #cccccc;
+    height: 100px;
+    padding: 10px;
+    width: 50%;
+}
+
+
+/* ------------------------------ [ MARGIN FIX ] */
+
+*:first-child {
+    margin-top: 0 !important;
+}
+
+*:last-child {
+    margin-bottom: 0 !important;
+}
