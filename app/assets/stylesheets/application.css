@@ -165,6 +165,10 @@ input {
     padding: 10px;
 }
 
+input[type=text] {
+    width: 50%;
+}
+
 input[type=submit] {
     background: #00703c;
     color: #ffffff;
