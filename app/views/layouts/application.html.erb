@@ -11,6 +11,10 @@
     <div id="site-header">
       <div class="wrapper">
         <h1><a href="../">Charlotte Cheap Eats</a></h1>
+        <ul id="site-header-menu">
+          <li><a href="../">Home</a></li>
+          <li><%= link_to 'List', controller: 'restaurants' %></li>
+        </ul>
       </div>
     </div>
     <%= yield %>

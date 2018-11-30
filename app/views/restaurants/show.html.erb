@@ -8,19 +8,29 @@
     </ul>
     <hr>
     <h2>Meals</h2>
-    <table>
-      <tr>
-        <th>Price</th>
-        <th>Meal</th>
-      </tr>
-      <%= render @restaurant.meals %>
-    </table>
+    <% if @restaurant.meals.count == 0 %>
+      <p>No meals listed for this restaurant.</p>
+    <% else %>
+      <table>
+        <tr>
+          <th>Price</th>
+          <th>Meal</th>
+        </tr>
+        <%= render @restaurant.meals %>
+      </table>
+    <% end %>
     <hr>
     <h3>Add a Meal</h3>
     <%= render 'meals/form' %>
     <hr>
     <h2>Reviews</h2>
-    <div id="comments"><%= render @restaurant.reviews %></div>
+    <% if @restaurant.reviews.count == 0 %>
+      <p>No one has reviewed this restaurant.</p>
+    <% else %>
+      <div id="comments">
+        <%= render @restaurant.reviews %>
+      </div>
+    <% end %>
     <hr>
     <h3>Add a Review</h3>
     <%= render 'reviews/form' %>
