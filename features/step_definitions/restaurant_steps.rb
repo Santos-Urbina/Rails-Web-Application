@@ -57,3 +57,7 @@ end
 When(/^I click "([^"]*)"$/) do |button|
   click_button(button)
 end
+
+Then(/^the page should not say "([^"]*)"$/) do |content|
+  page.should_not have_content(content)
+end
