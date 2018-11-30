@@ -3,6 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+/* ------------------------------ [ MARGIN FIX ] */
+
+*:first-child {
+    margin-top: 0;
+}
+
+*:last-child {
+    margin-bottom: 0;
+}
+
+
 /* ------------------------------ [ DEFAULTS ] */
 
 a {
@@ -26,10 +37,6 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Verdana, sans-serif;
 }
 
-h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
-    margin-top: 0;
-}
-
 hr {
     border: 2px solid #cccccc;
     margin: 50px;
@@ -37,10 +44,6 @@ hr {
 
 p {
     margin: 0 0 20px 0;
-}
-
-p:last-child {
-    margin: 0;
 }
 
 table {
