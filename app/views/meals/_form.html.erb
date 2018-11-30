@@ -1,11 +1,13 @@
 <%= form_for([@restaurant, @restaurant.meals.build]) do |f| %>
   <p>
-    <%= f.label :price %>
+    <%= f.label :price %><br>
     <%= f.text_field :price %>
-  
+  </p>
+  <p>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
-  
+  </p>
+  <p>
     <%= f.submit %>
   </p>
 <% end %>

@@ -1,11 +1,5 @@
-    <table>
-      <tr>
-        <th>Price</th>
-        <th>Meal</th>
-      </tr>
-        <tr>
-          <td><%= meal.price %></td>
-          <td><%= meal.name %></td>
-          <td><%= link_to 'Destroy Meal', [meal.restaurant, meal], method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-    </table>
+<tr>
+  <td><%= meal.price %></td>
+  <td><%= meal.name %></td>
+  <td><%= link_to 'Destroy Meal', [meal.restaurant, meal], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

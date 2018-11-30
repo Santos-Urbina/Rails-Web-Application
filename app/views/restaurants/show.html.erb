@@ -6,13 +6,18 @@
       <li><strong>Genre: </strong><%= @restaurant.genre %></li>
       <li><strong>Rating: </strong><%= @restaurant.rating %></li>
     </ul>
-    
+    <hr>
     <h2>Meals</h2>
-    <%= render @restaurant.meals %>
-    
+    <table>
+      <tr>
+        <th>Price</th>
+        <th>Meal</th>
+      </tr>
+      <%= render @restaurant.meals %>
+    </table>
+    <hr>
     <h3>Add a Meal</h3>
     <%= render 'meals/form' %>
-    
     <hr>
     <h2>Reviews</h2>
     <div id="comments"><%= render @restaurant.reviews %></div>
