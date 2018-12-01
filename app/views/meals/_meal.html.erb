@@ -1,5 +1,5 @@
 <tr>
-  <td><%= meal.price %></td>
   <td><%= meal.name %></td>
+  <td><%= number_to_currency(meal.price) %></td>
   <td><%= link_to 'Destroy Meal', [meal.restaurant, meal], method: :delete, data: { confirm: 'Are you sure?' } %></td>
 </tr>

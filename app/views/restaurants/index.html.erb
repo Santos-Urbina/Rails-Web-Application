@@ -6,14 +6,14 @@
     <% else %>
       <table>
         <tr>
-          <th>Genre</th>
           <th>Name</th>
+          <th>Genre</th>
           <th>Rating</th>
         </tr>
         <% @restaurants.each do |restaurant| %>
           <tr>
-            <td><%= restaurant.genre %></td>
             <td><%= restaurant.name %></td>
+            <td><%= restaurant.genre %></td>
             <td><%= restaurant.rating %></td>
             <td><%= link_to 'Show', restaurant_path(restaurant) %></td>
             <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
