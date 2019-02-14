@@ -1,24 +1,20 @@
-# README
+# Charlotte Cheap Eats
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Charlotte Cheap Eats is a web application made using the Ruby on Rails framework.
+This app was designed for students of UNC Charlotte to be able to rate and review 
+restaurants near campus. Functionalities include the ability for users to add
+restaurants and meals, along with their prices.
+This app was made with a team of two other students, I was one of the back end developers.
 
-Things you may want to cover:
+## What I Learned
 
-* Ruby version
+* Rails back end development
 
-* System dependencies
+* Rails testing using RSpec and Capybara
 
-* Configuration
+* MVC Framework
 
-* Database creation
+* Agile Development
 
-* Database initialization
+* CSS
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
